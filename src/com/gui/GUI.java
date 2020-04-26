@@ -32,9 +32,7 @@ public class GUI implements ActionListener, MouseMotionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
     }
-    //pentru ca butonul sa respecte comenzileclasa GUI trebe sa  sa implementeze interfetele MouseMotionListener si ActionListener
-    //trebe sa 'respecte contractul' adica sa supra-scrie metodele din interfate.
-
+    
     public void actionPerformed2(ActionEvent e) {
 
         label2.setText("Ok");
@@ -64,13 +62,11 @@ public class GUI implements ActionListener, MouseMotionListener {
 
         panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(200, 300, 100, 300));
-        //asa setez dimensiunile 'ferestrei' , pentru a seta 'borderele' am nevoie de un obj de tip
-        //'Border', dupa cum ii spune si numele, BorderFactory.createEmptyBorder() imi va face unu.
+        
         panel.setLayout(new GridLayout(0, 1));
-        panel.add(button);//adaug butonul panel in panel
+        panel.add(button);
         panel.add(button2);
         frame.add(panel, BorderLayout.CENTER);
-        //am adaugat panel-ul frame-ului si am setat sa fie pozitionat pe centru
 
 
         panel.add(label);
@@ -81,11 +77,11 @@ public class GUI implements ActionListener, MouseMotionListener {
         panel.setBackground(new Color(202, 240, 236));
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //aici am specificat ce sa faca cand inchid 'fereastra', adica va oprii 'Run-ul'
+     
 
-        frame.setTitle("GUI");//nume titlu
+        frame.setTitle("GUI");
         frame.pack();
-        frame.setVisible(true);//sa fie vizibila
+        frame.setVisible(true);
 
 
     }
